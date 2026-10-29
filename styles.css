@@ -1,0 +1,1570 @@
+/* ==========================================================================
+   CARDOSE AUTOMOBILI — EXACT 1:1 TOTEM AUTOMOBILI DESKTOP & MOBILE CSS
+   Includes exact @media only screen and (max-width: 980px) & (orientation: portrait)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Red+Rose:wght@300;400;500;600;700&display=swap');
+
+*, :before, :after {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+}
+
+html {
+  font-family: 'Red Rose', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #000000;
+  color: #ffffff;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+  background-color: #000000;
+  color: #ffffff;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body.lock-scroll {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+blockquote, dd, dl, figure, hr, p, pre {
+  margin: 0;
+}
+
+menu, ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.clickable {
+  cursor: pointer;
+  user-select: none;
+  transition-duration: 0.2s;
+  transition-property: opacity, background-color, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clickable:active {
+  opacity: 0.6 !important;
+  transition-property: none;
+}
+
+/* ==========================================================================
+   CONTAINERS (.center, .center.compact, .center.with-borders)
+   ========================================================================== */
+.center {
+  margin: 0 auto;
+  width: 970px;
+}
+
+.center.compact {
+  width: 850px;
+}
+
+@media only screen and (max-width: 980px) {
+  .center,
+  .center.compact {
+    margin-left: 1.25rem !important;
+    margin-right: 1.25rem !important;
+    width: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .center:not(.compact) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 1100px;
+  }
+  .center:not(.compact).with-borders {
+    border-color: rgba(255, 255, 255, 0.1);
+    border-left-width: 1px;
+    border-right-width: 1px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .center:not(.compact) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 1200px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .center:not(.compact) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 1450px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .center:not(.compact) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 1650px;
+  }
+}
+
+/* ==========================================================================
+   BUTTONS (.button.primary, .button.secondary)
+   ========================================================================== */
+.button {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+  color: #ffffff;
+  min-width: 50px;
+}
+
+.button .svg-ct {
+  display: inline-block;
+  height: 100%;
+  margin-right: 0.5rem;
+  vertical-align: top;
+}
+
+.button .svg-ct .inner {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.button .svg-ct .inner > svg {
+  height: 18px;
+  width: 18px;
+  fill: #ffffff;
+}
+
+.button.primary {
+  border-width: 1px 0.19rem 0.19rem 1px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+.button.primary:not(.no-background) {
+  background-color: #000000;
+}
+
+.button.primary.no-background {
+  background-color: transparent;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button.primary.no-background:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.button.secondary {
+  background-color: #ffffff;
+  color: #000000;
+  border-width: 1px 0.19rem 0.19rem 1px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+.button.secondary .svg-ct .inner > svg {
+  fill: #000000;
+}
+
+/* ==========================================================================
+   HEADER (EXACT TOTEM HEADER DESKTOP & MOBILE)
+   ========================================================================== */
+header.site-header {
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header.site-header .content {
+  align-items: center;
+  display: flex;
+  height: 10rem;
+  justify-content: space-between;
+}
+
+header.site-header .content .logo-ct {
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header.site-header .content .logo-ct .logo {
+  height: 1.25rem;
+  width: auto;
+  pointer-events: auto;
+  fill: currentColor;
+  color: #ffffff;
+}
+
+header.site-header .content .button {
+  pointer-events: auto;
+}
+
+@media only screen and (max-width: 980px) {
+  header.site-header .content {
+    height: 5rem;
+  }
+  header.site-header .content .logo-ct .logo {
+    height: 1.15rem;
+    max-width: 72vw;
+  }
+  header.site-header:not(.keep-mobile-btn) .content .button {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   RIGHT-SIDE FIXED VERTICAL NAVIGATION (DESKTOP & MOBILE BARS)
+   ========================================================================== */
+nav.side-nav {
+  align-items: flex-end;
+  font-size: 0.875rem;
+  height: 300px;
+  line-height: 1.25rem;
+  pointer-events: none;
+  position: fixed;
+  right: 2.5rem;
+  top: 0;
+  width: 200px;
+  color: #ffffff;
+  transform: translateY(calc(50vh - 75px));
+  z-index: 15;
+}
+
+nav.side-nav .section {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+  pointer-events: auto;
+}
+
+nav.side-nav .section p {
+  opacity: 0;
+  text-transform: uppercase;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+nav.side-nav .section .line {
+  height: 0.125rem;
+  width: 1.25rem;
+  background-color: #ffffff;
+  transition: width 0.2s ease;
+}
+
+nav.side-nav .section:hover p {
+  opacity: 1;
+}
+
+nav.side-nav .section:hover .line {
+  width: 1.75rem;
+}
+
+nav.side-nav .section.current p {
+  opacity: 1 !important;
+}
+
+nav.side-nav .section.current .line {
+  width: 2.25rem !important;
+}
+
+@media only screen and (max-width: 980px) {
+  nav.side-nav {
+    right: 1.25rem;
+    width: 80px;
+  }
+  nav.side-nav .section {
+    gap: 1rem;
+  }
+  nav.side-nav .section p {
+    display: none !important;
+  }
+  nav.side-nav .section .line {
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+  }
+  nav.side-nav .section:hover p {
+    opacity: 0;
+  }
+  nav.side-nav .section:hover .line {
+    width: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   HOMEPAGE 100VH FULL-SCREEN SECTIONS (DESKTOP & PORTRAIT MOBILE)
+   ========================================================================== */
+section.hero-section .inner {
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+}
+
+section.hero-section .inner .video-ct,
+section.hero-section .inner .video-ct img,
+section.hero-section .inner .video-ct video {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+section.hero-section .inner .video-ct .landscape-image {
+  display: block;
+}
+
+section.hero-section .inner .video-ct .portrait-image {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  section.hero-section .inner .video-ct .landscape-image {
+    display: none !important;
+  }
+  section.hero-section .inner .video-ct .portrait-image {
+    display: block !important;
+  }
+}
+
+section.hero-section .inner .video-ct .overlay {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+section.hero-section .inner .content {
+  height: 100%;
+  position: relative;
+  color: #ffffff;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+section.hero-section.zoom-out .inner .content {
+  transform: scale(0.95);
+}
+
+section.hero-section .inner .content .content-ct {
+  height: 100%;
+  position: relative;
+}
+
+section.hero-section .inner .content .content-ct .main {
+  bottom: 3rem;
+  display: flex;
+  position: absolute;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+section.hero-section .inner .content .content-ct .main .announcement {
+  max-width: 450px;
+}
+
+section.hero-section .inner .content .content-ct .main .announcement .icon {
+  height: 3rem;
+  width: auto;
+  margin-bottom: 1.5rem;
+  fill: currentColor;
+  color: #ffffff;
+  display: block;
+}
+
+section.hero-section .inner .content .content-ct .main .announcement h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+
+section.hero-section .inner .content .content-ct .main .announcement h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+}
+
+section.hero-section .inner .content .content-ct .main .announcement .line {
+  height: 0.125rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  width: 24rem;
+  max-width: 100%;
+  background-color: #ffffff;
+}
+
+section.hero-section .inner .content .content-ct .main .highlights {
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width: 1200px) {
+  section.hero-section .inner .content .content-ct .main {
+    left: 2rem;
+    right: 2rem;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  section.hero-section .inner .content .content-ct .main {
+    bottom: 4rem;
+    width: auto;
+    left: 0;
+    right: 0;
+  }
+  section.hero-section .inner .content .content-ct .main .announcement {
+    padding-right: 4rem;
+    max-width: 100%;
+  }
+  section.hero-section .inner .content .content-ct .main .announcement .icon {
+    height: 2rem;
+    margin-bottom: 1rem;
+  }
+  section.hero-section .inner .content .content-ct .main .announcement h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  section.hero-section .inner .content .content-ct .main .announcement .line {
+    width: 16rem;
+    max-width: 100%;
+  }
+  section.hero-section .inner .content .content-ct .main .highlights {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   HIGHLIGHTS COMPONENT (.highlights)
+   ========================================================================== */
+.highlights {
+  align-items: flex-end;
+  display: flex;
+  flex-grow: 1;
+  gap: 2rem;
+}
+
+.highlights .highlight {
+  border-left-width: 2px;
+  border-color: #ffffff;
+  padding-left: 0.75rem;
+}
+
+.highlights .highlight:first-child {
+  border-left-width: 0;
+  padding-left: 0;
+}
+
+.highlights .highlight h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.highlights .highlight p {
+  font-family: 'Red Rose', sans-serif !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  margin-top: 0 !important;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 980px) {
+  .highlights {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .highlights .highlight:first-child {
+    border-left-width: 2px;
+    padding-left: 0.75rem;
+  }
+}
+
+/* ==========================================================================
+   FULL-SCREEN SLIDE-UP OVERLAYS (.full-screen-overlay)
+   ========================================================================== */
+.full-screen-overlay {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.full-screen-overlay > .background {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.full-screen-overlay > .content {
+  background-color: #000000;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.full-screen-overlay > .content .header {
+  position: relative;
+  z-index: 10;
+}
+
+.full-screen-overlay > .content .scroll-content {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.full-screen-overlay.open {
+  pointer-events: auto;
+}
+
+.full-screen-overlay.open > .background {
+  opacity: 1;
+}
+
+.full-screen-overlay.open > .content {
+  transform: translateY(0px);
+}
+
+/* Action Bar inside Overlays */
+.action-bar-ct .action-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.close-button {
+  align-items: center;
+  border-radius: 9999px;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+  background-color: #313131;
+}
+
+.close-button svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: currentColor;
+  color: #ffffff;
+}
+
+/* Staggered reveal inside overlays */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.full-screen-overlay.open .reveal-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   OVERLAY 0: CONFIGURE NOW OVERLAY ("WHICH MODEL ARE YOU INTERESTED IN?")
+   ========================================================================== */
+.configure-overlay .main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 4rem;
+  text-transform: uppercase;
+}
+
+.configure-overlay .cars {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.configure-overlay .cars .car {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+
+.configure-overlay .cars .car .image {
+  height: 13rem;
+  width: 20rem;
+  flex-shrink: 0;
+  background-color: #222222;
+  background-position: 50%;
+  background-size: cover;
+}
+
+.configure-overlay .cars .car .image img {
+  height: 100%;
+  object-position: center;
+  width: 100%;
+}
+
+.configure-overlay .cars .car .details {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.configure-overlay .cars .car .details .icon {
+  height: 2.5rem;
+  width: auto;
+  margin-bottom: 1rem;
+  fill: currentColor;
+}
+
+.configure-overlay .cars .car .details h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+
+.configure-overlay .cars .car .details h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 980px) {
+  .configure-overlay .main-title {
+    margin-top: 6rem;
+  }
+  .configure-overlay .cars .car {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .configure-overlay .cars .car .image {
+    height: 54vw;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   OVERLAY SECTIONS (VISION, T12, GT ELECTRIC, GT SUPER, GT SP, ABOUT)
+   ========================================================================== */
+.overlay-section {
+  padding-bottom: 3rem;
+  padding-top: 6rem;
+  color: #ffffff;
+}
+
+.overlay-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.overlay-section p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  line-height: 2;
+  margin-top: 1rem;
+}
+
+/* Vision specific */
+.overlay-section .vision-intro {
+  margin-bottom: 4rem;
+}
+
+.overlay-section .vision-intro img {
+  height: 25rem;
+  margin-bottom: 0.75rem;
+  min-width: 0;
+  width: 100%;
+  background-color: #222222;
+  object-fit: cover;
+}
+
+.overlay-section .signature {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 4rem;
+}
+
+.overlay-section .signature .image {
+  flex-shrink: 0;
+}
+
+.overlay-section .signature .image img {
+  height: 48rem;
+  width: 22rem;
+  background-color: #222222;
+  object-fit: cover;
+}
+
+.overlay-section .signature .text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.overlay-section .design {
+  margin-bottom: 4rem;
+}
+
+.overlay-section .design .video video {
+  height: 30rem;
+  margin-bottom: 0.75rem;
+  width: 100%;
+  background-color: #222222;
+  object-fit: cover;
+}
+
+/* Model Intro & Battery Pack Split */
+.overlay-section .intro,
+.overlay-section .battery-pack {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 4rem;
+}
+
+.overlay-section .intro .image,
+.overlay-section .battery-pack .image {
+  flex-shrink: 0;
+}
+
+.overlay-section .intro .image img,
+.overlay-section .battery-pack .image img {
+  height: 28rem;
+  width: 25rem;
+  background-color: #222222;
+  object-fit: cover;
+}
+
+.overlay-section .intro .image img.extended-height {
+  height: 45rem;
+}
+
+.overlay-section .battery-pack .image img {
+  height: 37rem;
+}
+
+.overlay-section .intro .text,
+.overlay-section .battery-pack .text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* Wide Section (T12) */
+.overlay-section .wide-section {
+  margin-bottom: 4rem;
+}
+
+.overlay-section .wide-section img {
+  height: auto;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  background-color: #222222;
+  object-fit: cover;
+}
+
+/* 3-Image Bento Grid (.image-grid) — Exact Totem Desktop & Mobile */
+.overlay-section .design-meets-performance,
+.overlay-section .reshaping-icon,
+.overlay-section .hello-gloria {
+  margin-bottom: 4rem;
+}
+
+.overlay-section .image-grid {
+  display: flex;
+  gap: 1rem;
+  height: 30rem;
+  margin-bottom: 1rem;
+}
+
+.overlay-section .image-grid .col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+  height: 100%;
+}
+
+.overlay-section .image-grid .col img {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  background-color: #222222;
+  object-fit: cover;
+}
+
+.overlay-section .image-grid .col:first-child {
+  flex-shrink: 0;
+  width: 30rem;
+}
+
+/* About Overlay Specific */
+.overlay-section .about-intro {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 4rem;
+}
+
+.overlay-section .about-intro .image {
+  flex-shrink: 0;
+}
+
+.overlay-section .about-intro .image img {
+  height: 40rem;
+  width: 23rem;
+  background-color: #222222;
+  object-fit: cover;
+}
+
+.overlay-section .about-intro .text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.overlay-section .values {
+  margin-bottom: 4rem;
+}
+
+.overlay-section .values .values-grid {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.overlay-section .values .values-grid img {
+  flex: 1 1 0%;
+  height: 32rem;
+  min-width: 0;
+  background-color: #222222;
+  object-fit: cover;
+}
+
+.overlay-section .partners {
+  margin-bottom: 4rem;
+}
+
+.overlay-section .partners .list {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.overlay-section .partners .list .partner {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  height: 8rem;
+  justify-content: center;
+}
+
+.overlay-section .partners .list .partner img {
+  max-height: 39px;
+  max-width: 95px;
+  object-fit: contain;
+}
+
+.overlay-section .highlights-ct {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.overlay-section .buttons-ct {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+/* Mobile Breakpoint for Overlay Sections (@media max-width: 980px) */
+@media only screen and (max-width: 980px) {
+  .overlay-section .vision-intro img {
+    height: 55vw;
+    width: 100%;
+  }
+  .overlay-section .signature {
+    flex-direction: column;
+  }
+  .overlay-section .signature .image img {
+    height: 110vw;
+    width: 100%;
+  }
+  .overlay-section .design .video video {
+    height: 60vw;
+  }
+  .overlay-section .intro,
+  .overlay-section .battery-pack,
+  .overlay-section .about-intro {
+    flex-direction: column;
+  }
+  .overlay-section .intro .image img,
+  .overlay-section .intro .image img.extended-height,
+  .overlay-section .battery-pack .image img {
+    height: 95vw;
+    width: 100%;
+  }
+  .overlay-section .about-intro .image img {
+    height: 110vw;
+    width: 100%;
+  }
+  .overlay-section .image-grid {
+    height: 20rem;
+  }
+  .overlay-section .image-grid .col:first-child {
+    width: 60vw;
+  }
+  .overlay-section .values .values-grid img {
+    height: 15rem;
+  }
+  .overlay-section .partners .list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .overlay-section .partners .list .partner img {
+    height: 2.5rem;
+    max-width: 80px;
+  }
+  .overlay-section .buttons-ct {
+    flex-direction: column;
+  }
+  .overlay-section .buttons-ct .button {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   FULL-BLEED HORIZONTAL GALLERY SLIDER (.gallery) — EXACT TOTEM
+   ========================================================================== */
+.gallery {
+  height: 52vw;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .images-ct {
+  height: 100%;
+  overflow: visible;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  width: 100%;
+  font-size: 0;
+}
+
+.gallery .images-ct img {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.gallery .controls {
+  bottom: 2.5rem;
+  display: flex;
+  left: 2.5rem;
+  position: absolute;
+  right: 2.5rem;
+}
+
+.gallery .controls .col {
+  flex-grow: 1;
+  align-items: center;
+}
+
+.gallery .controls .col:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gallery .controls .col .control {
+  background-color: rgba(49, 49, 49, 0.4);
+  border-radius: 9999px;
+  display: flex;
+  height: 4rem;
+  width: 4rem;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery .controls .col .control svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: currentColor;
+  color: #ffffff;
+}
+
+.gallery .controls .col .control.disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 980px) {
+  .gallery {
+    height: 60vw;
+  }
+  .gallery .controls {
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+  .gallery .controls .col .control {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .gallery .controls .col .control svg {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
+/* ==========================================================================
+   TECHNICAL SPECIFICATION ACCORDIONS (.accordion) — EXACT TOTEM
+   ========================================================================== */
+.accordion {
+  border-top: 1px solid #ffffff;
+  position: relative;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion .title-ct {
+  cursor: pointer;
+  display: flex;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #ffffff;
+}
+
+.accordion .title-ct .title {
+  flex-grow: 1;
+}
+
+.accordion .title-ct .icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transform: rotate(90deg);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 2.5rem;
+}
+
+.accordion .title-ct .icon svg {
+  width: 0.5rem;
+  height: auto;
+  fill: #ffffff;
+}
+
+.accordion .content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion.open .title-ct .icon {
+  transform: rotate(-90deg);
+}
+
+.accordion.open .content {
+  display: block;
+  max-height: 4000px;
+  opacity: 1;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.accordion .detail {
+  border-bottom: 1px solid #262626;
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  color: #ffffff;
+}
+
+.accordion .detail .inner {
+  display: flex;
+  font-size: 1rem;
+  gap: 1rem;
+  line-height: 1.5rem;
+}
+
+.accordion .detail .inner h4 {
+  flex-shrink: 0;
+  width: 16rem;
+}
+
+.accordion .detail .inner p {
+  font-weight: 600;
+  margin-top: 0;
+  line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 980px) {
+  .accordion .detail .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .accordion .detail .inner h4 {
+    width: auto;
+  }
+}
+
+/* ==========================================================================
+   INTERACTIVE CONFIGURATOR & REQUEST INFO MODAL OVERLAY
+   ========================================================================== */
+.configurator-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 980px) {
+  .configurator-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.configurator-preview {
+  background-color: #111111;
+  border: 1px solid #262626;
+  padding: 1.25rem;
+}
+
+.configurator-preview .preview-img {
+  width: 100%;
+  height: 20rem;
+  background-color: #222222;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 980px) {
+  .configurator-preview .preview-img {
+    height: 54vw;
+  }
+}
+
+.configurator-preview .preview-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  border-top: 1px solid #262626;
+  padding-top: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .configurator-preview .preview-specs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.configurator-preview .preview-specs div span {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.configurator-preview .preview-specs div strong {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.inquiry-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.inquiry-form label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  width: 100%;
+  background-color: #0d0d0d;
+  border: 1px solid #333333;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.inquiry-form input:focus,
+.inquiry-form select:focus,
+.inquiry-form textarea:focus {
+  border-color: #ffffff;
+}
+
+.inquiry-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 980px) {
+  .inquiry-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.option-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.option-pill {
+  border: 1px solid #333333;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.option-pill.active {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ==========================================================================
+   NEWSROOM & ARTICLE DETAIL (EXACT TOTEM DESKTOP & MOBILE)
+   ========================================================================== */
+.newsroom-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-bottom: 3rem;
+  margin-top: 9rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.articles {
+  column-gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  row-gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.articles .article {
+  cursor: pointer;
+  color: #ffffff;
+  display: block;
+}
+
+.articles .article .image {
+  margin-bottom: 0.5rem;
+  background-color: #222222;
+  background-position: 50%;
+  background-size: cover;
+  padding-top: 65%;
+}
+
+.articles .article h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.articles .article p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media only screen and (max-width: 980px) {
+  .newsroom-heading {
+    margin-bottom: 1.5rem;
+    margin-top: 6rem;
+  }
+  .articles {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.article-reader .cover {
+  margin-bottom: 0.5rem;
+  background-color: #222222;
+  background-position: 50%;
+  background-size: cover;
+  padding-top: 65%;
+}
+
+.article-reader h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.article-reader h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.article-reader .text p {
+  font-size: 1rem;
+  line-height: 1.625;
+  margin-bottom: 1.25rem;
+}
+
+.article-reader .article-gallery img {
+  margin-bottom: 1.25rem;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 980px) {
+  .article-reader h2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   FOOTER (EXACT TOTEM FOOTER DESKTOP & MOBILE)
+   ========================================================================== */
+footer.site-footer {
+  position: relative;
+  z-index: 10;
+  background-color: #000000;
+  padding-bottom: 3.5rem;
+  padding-top: 3.5rem;
+  color: #ffffff;
+}
+
+footer.site-footer .logo {
+  height: 1.25rem;
+  width: auto;
+  margin-bottom: 2rem;
+  fill: currentColor;
+}
+
+footer.site-footer .cols-ct {
+  display: flex;
+  gap: 6rem;
+  margin-bottom: 0.75rem;
+}
+
+footer.site-footer .cols-ct .col h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+footer.site-footer .cols-ct .col h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+footer.site-footer .cols-ct .col a,
+footer.site-footer .cols-ct .col li,
+footer.site-footer .cols-ct .col p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+footer.site-footer .cols-ct .col li,
+footer.site-footer .cols-ct .col p {
+  margin-bottom: 0.5rem;
+}
+
+footer.site-footer .cols-ct .col .disclaimer {
+  margin-top: 1.75rem;
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+  max-width: 250px;
+}
+
+footer.site-footer .cols-ct .col .socials {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+footer.site-footer .cols-ct .col .socials .social {
+  align-items: center;
+  border: 1px solid #ffffff;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+}
+
+footer.site-footer .cols-ct .col .socials .social svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: currentColor;
+}
+
+footer.site-footer .cols-ct .col:last-child {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 12rem;
+}
+
+footer.site-footer .bottom-bar {
+  display: flex;
+}
+
+footer.site-footer .bottom-bar .left,
+footer.site-footer .bottom-bar .right {
+  flex: 1 1 0%;
+}
+
+footer.site-footer .bottom-bar .left p,
+footer.site-footer .bottom-bar .right p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+footer.site-footer .bottom-bar .right {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 980px) {
+  footer.site-footer .cols-ct {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  footer.site-footer .cols-ct .col:last-child {
+    align-items: flex-start;
+    width: auto;
+  }
+  footer.site-footer .bottom-bar,
+  footer.site-footer .bottom-bar .right {
+    flex-direction: column;
+  }
+  footer.site-footer .bottom-bar .right {
+    align-items: flex-start;
+    gap: 0;
+  }
+}

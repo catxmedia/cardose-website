@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsroom — Cardose Automobili</title>
+  <meta name="description" content="Latest commissions, bespoke editions, and press releases from Cardose Automobili Atelier.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header (Exact Totem Automobili structure) -->
+  <header class="site-header">
+    <div class="center">
+      <a href="index.html" class="logo clickable" aria-label="Cardose Automobili">
+        <svg viewBox="0 0 805 40" xmlns="http://www.w3.org/2000/svg" class="fill-current">
+          <path d="M0 6 L10 0 L82 0 L82 10 L14 10 L14 30 L82 30 L82 40 L10 40 L0 34 Z"/>
+          <path d="M118 40 L152 0 L170 0 L204 40 L188 40 L179 29 L143 29 L134 40 Z M150 20 L172 20 L161 7 Z"/>
+          <path d="M234 0 L312 0 L320 8 L320 19 L312 26 L296 26 L320 40 L300 40 L276 26 L248 26 L248 40 L234 40 Z M248 9 L248 17 L306 17 L306 9 Z"/>
+          <path d="M354 0 L428 0 L440 10 L440 30 L428 40 L354 40 Z M368 10 L368 30 L424 30 L424 10 Z"/>
+          <path d="M474 6 L484 0 L554 0 L564 6 L564 34 L554 40 L484 40 L474 34 Z M488 10 L488 30 L550 30 L550 10 Z"/>
+          <path d="M598 6 L608 0 L682 0 L682 9 L612 9 L612 16 L674 16 L684 22 L684 34 L674 40 L598 40 L598 31 L670 31 L670 24 L608 24 L598 18 Z"/>
+          <path d="M718 0 L802 0 L802 9 L732 9 L732 16 L790 16 L790 24 L732 24 L732 31 L802 31 L802 40 L718 40 Z"/>
+        </svg>
+      </a>
+      <div class="spacer"></div>
+      <div class="actions">
+        <a href="index.html" class="button clickable primary no-background">Back to Atelier</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Newsroom Main Grid -->
+  <main>
+    <div class="center">
+      <h1 class="newsroom-heading">Newsroom</h1>
+      <div class="articles" id="standaloneArticlesGrid"></div>
+    </div>
+  </main>
+
+  <!-- Full-Screen Article Reader Overlay -->
+  <div class="full-screen-overlay" id="overlay-article" aria-hidden="true">
+    <div class="background" data-close-overlay></div>
+    <div class="content">
+      <div class="header">
+        <div class="center">
+          <div class="action-bar-ct">
+            <div class="action-bar">
+              <div class="close-button clickable" data-close-overlay>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="fill-current"><path d="M16.95 8.464a1 1 0 1 0-1.414-1.414L12 10.586 8.465 7.05A1 1 0 0 0 7.05 8.464L10.586 12 7.05 15.536a1 1 0 1 0 1.415 1.414L12 13.414l3.536 3.536a1 1 0 1 0 1.414-1.414L13.414 12z" clip-rule="evenodd"></path></svg>
+              </div>
+              <div class="button clickable primary" data-close-overlay>All Articles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-content">
+        <div class="article-reader">
+          <div class="cover" id="articleReaderCover"></div>
+          <div class="center compact">
+            <h1 id="articleReaderTitle"></h1>
+            <h2 id="articleReaderSubtitle"></h2>
+            <div class="text" id="articleReaderContent"></div>
+            <div class="article-gallery" id="articleReaderGallery"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 805 40" class="fill-current logo">
+        <path d="M0 6 L10 0 L82 0 L82 10 L14 10 L14 30 L82 30 L82 40 L10 40 L0 34 Z"/>
+        <path d="M118 40 L152 0 L170 0 L204 40 L188 40 L179 29 L143 29 L134 40 Z M150 20 L172 20 L161 7 Z"/>
+        <path d="M234 0 L312 0 L320 8 L320 19 L312 26 L296 26 L320 40 L300 40 L276 26 L248 26 L248 40 L234 40 Z M248 9 L248 17 L306 17 L306 9 Z"/>
+        <path d="M354 0 L428 0 L440 10 L440 30 L428 40 L354 40 Z M368 10 L368 30 L424 30 L424 10 Z"/>
+        <path d="M474 6 L484 0 L554 0 L564 6 L564 34 L554 40 L484 40 L474 34 Z M488 10 L488 30 L550 30 L550 10 Z"/>
+        <path d="M598 6 L608 0 L682 0 L682 9 L612 9 L612 16 L674 16 L684 22 L684 34 L674 40 L598 40 L598 31 L670 31 L670 24 L608 24 L598 18 Z"/>
+        <path d="M718 0 L802 0 L802 9 L732 9 L732 16 L790 16 L790 24 L732 24 L732 31 L802 31 L802 40 L718 40 Z"/>
+      </svg>
+
+      <div class="cols-ct">
+        <div class="col">
+          <h3>Cardose Automobili Atelier</h3>
+          <p>Plot 14, Bespoke Automotive Enclave</p>
+          <p>GST / CIN: 27AACCC9418B1Z5</p>
+          <p><a href="mailto:concierge@cardose.in" class="clickable">concierge@cardose.in</a></p>
+          <p class="disclaimer">Cardose Automobili is an independent luxury surface preservation atelier and is not sponsored, associated, approved, endorsed nor affiliated with Alfa Romeo &amp; Stellantis SPA.</p>
+        </div>
+
+        <div class="col">
+          <h4>The cars</h4>
+          <ul>
+            <li><a href="index.html#gt-electric" class="clickable">GT Electric</a></li>
+            <li><a href="index.html#gt-super" class="clickable">GT Super</a></li>
+            <li><a href="index.html#gt-modificata" class="clickable">GT Super SP</a></li>
+            <li><a href="index.html#t12" class="clickable">T12 Series</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4>Press</h4>
+          <p><a href="newsroom.html" class="clickable">Newsroom</a></p>
+          <p><a href="index.html#about" class="clickable">About Us</a></p>
+        </div>
+
+        <div class="col">
+          <h4>Get in touch</h4>
+          <p><a href="mailto:info@cardose.in" class="clickable">info@cardose.in</a></p>
+          <p><a href="mailto:press@cardose.in" class="clickable">press@cardose.in</a></p>
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <div class="left">
+          <p>ISO 9001:2015 Certified Atelier</p>
+        </div>
+        <div class="right">
+          <p><a href="privacy.html" class="clickable">Privacy &amp; Cookie</a></p>
+          <p>Handcrafted by Cardose Automobili</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
